@@ -6,6 +6,13 @@
 
 Mayomba Restaurant is a single-page responsive website built using HTML, CSS, JavaScript, and Bootstrap. It features a polished and intuitive layout with a welcoming landing page, a dynamic menu loaded asynchronously from a local JSON file, and a contact form with validation. The project demonstrates good coding practices, including separation of data and code, event listeners, and asynchronous data fetching.
 
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap 5
+
 ## Features
 
 - Responsive design using Bootstrap 5
@@ -34,6 +41,14 @@ Mayomba Restaurant is a single-page responsive website built using HTML, CSS, Ja
 - Adjust quantities or remove items in the cart.
 - Fill out and submit the contact form.
 
+## Contributing
+
+Contributions are welcome! Please follow these guidelines:
+
+- Fork the repository and create your branch from `main`.
+- Make your changes with clear, descriptive commit messages.
+- Submit a pull request describing your changes and why they should be merged.
+
 ## Commit Guidelines
 
 - Make regular commits with clear, descriptive messages.
@@ -53,4 +68,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ---
 
 Thank you for visiting Mayomba Restaurant!
-# mayombaResturant
