@@ -142,6 +142,67 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCartUI();
       });
 
+      // Function to submit order to backend
+      async function submitOrder(phone) {
+        const items = Object.values(cart);
+        if (items.length === 0) {
+          alert('Your cart is empty. Please add items before submitting an order.');
+          return;
+        }
+        if (!phone) {
+          alert('Please enter your phone number to place an order.');
+          return;
+        }
+        const orderData = {
+          phone,
+          items
+        };
+        try {
+          const response = await fetch('http://localhost:3000/orders', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(orderData)
+          });
+          if (response.ok) {
+            alert('Order placed successfully!');
+            // Clear cart after successful order
+            for (const key in cart) {
+              delete cart[key];
+            }
+            updateCartUI();
+            document.getElementById('phone-number').value = '';
+          } else {
+            alert('Failed to place order. Please try again.');
+          }
+        } catch (error) {
+          console.error('Error submitting order:', error);
+          alert('Error submitting order. Please try again later.');
+        }
+      }
+
+      // Add order submission form and button
+      const orderSection = document.getElementById('order-section');
+      if (orderSection) {
+        const phoneInput = document.createElement('input');
+        phoneInput.type = 'text';
+        phoneInput.id = 'phone-number';
+        phoneInput.placeholder = 'Enter your phone number';
+        phoneInput.className = 'form-control mb-2';
+
+        const submitBtn = document.createElement('button');
+        submitBtn.textContent = 'Submit Order';
+        submitBtn.className = 'btn btn-primary';
+        submitBtn.addEventListener('click', () => {
+          const phone = phoneInput.value.trim();
+          submitOrder(phone);
+        });
+
+        orderSection.appendChild(phoneInput);
+        orderSection.appendChild(submitBtn);
+      }
+
       // Initialize cart UI on page load
       updateCartUI();
     })
