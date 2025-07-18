@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Baked salmon with fennel & tomatoes",
+    "image": "https://www.themealdb.com/images/media/meals/1548772327.jpg",
+    "description": "Delicious seafood dish to satisfy your cravings.",
+    "price": 1200
+  },
+  {
+    "name": "Cajun spiced fish tacos",
+    "image": "https://www.themealdb.com/images/media/meals/uvuyxu1503067369.jpg",
+    "description": "Delicious seafood dish to satisfy your cravings.",
+    "price": 900
+  },
+  {
+    "name": "Escovitch Fish",
+    "image": "https://www.themealdb.com/images/media/meals/1520084413.jpg",
+    "description": "Delicious seafood dish to satisfy your cravings.",
+    "price": 1100
+  },
+  {
+    "name": "Fish fofos",
+    "image": "https://www.themealdb.com/images/media/meals/a15wsa1614349126.jpg",
+    "description": "Delicious seafood dish to satisfy your cravings.",
+    "price": 800
+  },
+  {
+    "name": "Fish pie",
+    "image": "https://www.themealdb.com/images/media/meals/ysxwuq1487323065.jpg",
+    "description": "Delicious seafood dish to satisfy your cravings.",
+    "price": 1300
+  },
+  {
+    "name": "Fish Soup (Ukha)",
+    "image": "https://www.themealdb.com/images/media/meals/ysxwuq1487323065.jpg",
+    "description": "Delicious seafood dish to satisfy your cravings.",
+    "price": 1000
+  }
+]

@@ -1,0 +1,23 @@
+/* Body padding to offset fixed navbar height */
+body {
+  padding-top: 56px;
+}
+
+/* Hero section styling with background image and centered content */
+.hero {
+  background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1470&q=80') no-repeat center center;
+  background-size: cover;
+  height: 60vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Text shadow for better readability on image */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+/* Styling for form validation error messages */
+.form-error {
+  color: red;
+  font-size: 0.875em;
+}

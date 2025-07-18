@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mayomba Restaurant</title>
+  <!-- Bootstrap CSS for responsive design and components -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Custom CSS styles -->
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- Navbar: fixed top, dark theme, responsive -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <!-- Brand name linking to top of page -->
+      <a class="navbar-brand" href="#">Mayomba Restaurant</a>
+      <!-- Toggler button for collapsing navbar on small screens -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navbar links: Home, Menu, Contact -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <!-- Active link highlights current section -->
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section: welcoming message with background image -->
+  <section id="home" class="hero text-center">
+    <div>
+      <!-- Main heading -->
+      <h1 class="display-4">Welcome to Mayomba Restaurant</h1>
+      <!-- Subheading -->
+      <p class="lead">Experience the taste of authentic cuisine</p>
+    </div>
+  </section>
+
+  <!-- Menu Section: container for dynamically loaded menu items -->
+  <section id="menu" class="container my-5">
+    <h2 class="mb-4 text-center">Our Menu</h2>
+    <div class="row" id="menu-items">
+      <!-- Menu items will be loaded here dynamically by JavaScript -->
+    </div>
+  </section>
+
+  <!-- Cart Section: shows items added to cart and total price -->
+  <section id="cart" class="container my-5">
+    <h2 class="mb-4 text-center">Your Cart</h2>
+    <div id="cart-items" class="mb-3">
+      <!-- Initially shows empty cart message -->
+      <p>Your cart is empty.</p>
+    </div>
+    <div class="d-flex justify-content-between align-items-center">
+      <!-- Total price display -->
+      <h5>Total: <span id="cart-total">KSH 0</span></h5>
+      <!-- Button to clear all items from cart -->
+      <button id="clear-cart" class="btn btn-danger btn-sm">Clear Cart</button>
+    </div>
+  </section>
+
+  <!-- Contact Section: form for user messages -->
+  <section id="contact" class="container my-5">
+    <h2 class="mb-4 text-center">Contact Us</h2>
+    <form id="contact-form" novalidate>
+      <div class="mb-3">
+        <!-- Name input with required validation -->
+        <label for="name" class="form-label">Name<span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="name" required />
+        <!-- Container for name validation error messages -->
+        <div class="form-error" id="name-error"></div>
+      </div>
+      <div class="mb-3">
+        <!-- Email input with required validation -->
+        <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
+        <input type="email" class="form-control" id="email" required />
+        <!-- Container for email validation error messages -->
+        <div class="form-error" id="email-error"></div>
+      </div>
+      <div class="mb-3">
+        <!-- Message textarea with required validation -->
+        <label for="message" class="form-label">Message<span class="text-danger">*</span></label>
+        <textarea class="form-control" id="message" rows="4" required></textarea>
+        <!-- Container for message validation error messages -->
+        <div class="form-error" id="message-error"></div>
+      </div>
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary">Send Message</button>
+      <!-- Success message shown after form submission -->
+      <div id="form-success" class="mt-3 text-success" style="display:none;">Thank you for contacting us!</div>
+    </form>
+  </section>
+
+  <!-- Footer with copyright -->
+  <footer class="bg-dark text-white text-center py-3">
+    &copy; 2024 Mayomba Restaurant. All rights reserved.
+  </footer>
+
+  <!-- Bootstrap JS bundle for interactive components -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
